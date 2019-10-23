@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod
+  namespace: default
+spec:
+  containers:
+  - name: test
+    image: alpine:3.10
+    command: [/bin/sh]
+    args:
+    - -xec
+    - |
+      #!/bin/sh
+      while true; do sleep 10; done
